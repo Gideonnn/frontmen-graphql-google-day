@@ -1,0 +1,13 @@
+overwrite: true
+schema: ./src/schema/**/*.graphql
+documents: null
+generates:
+  ./src/schema/generated.ts:
+    plugins:
+      - 'typescript-common'
+      - 'typescript-server'
+      - 'typescript-resolvers'
+      - 'typescript-mongodb'
+  ./graphql.schema.json:
+    plugins:
+      - 'introspection'

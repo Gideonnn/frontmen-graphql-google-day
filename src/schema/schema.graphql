@@ -1,0 +1,6 @@
+# import './User.graphql';
+
+type Query {
+  users: [User]
+  foo: [User]
+}

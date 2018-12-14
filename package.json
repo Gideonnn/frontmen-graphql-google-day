@@ -1,0 +1,40 @@
+{
+  "name": "apollo-server-experiment",
+  "version": "1.0.0",
+  "description": "Google days experiment",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build src/index.ts --target=node",
+    "build:watch": "parcel watch src/index.ts --target=node",
+    "start": "npm run build && npm run start:server",
+    "start:server": "node dist/index.js",
+    "start:server:watch": "nodemon dist/index.js",
+    "start:dev": "npm-run-parallel build:watch start:server:watch",
+    "codegen": "gql-gen --config codegen.yml"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-connector-mongodb": "^2.0.3",
+    "apollo-server": "^2.3.1",
+    "casual": "^1.5.19",
+    "graphql": "^14.0.2",
+    "graphql-codegen-typescript-mongodb-template": "^0.15.0",
+    "graphql-tools": "^4.0.3",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.16"
+  },
+  "devDependencies": {
+    "graphql-code-generator": "^0.15.0",
+    "graphql-codegen-introspection": "^0.15.0",
+    "graphql-codegen-typescript-common": "0.15.0",
+    "graphql-codegen-typescript-mongodb": "^0.15.0",
+    "graphql-codegen-typescript-resolvers": "0.15.0",
+    "graphql-codegen-typescript-server": "0.15.0",
+    "nodemon": "^1.18.8",
+    "npm-run-parallel": "^0.6.0",
+    "parcel-bundler": "^1.10.3",
+    "source-map-support": "^0.5.9",
+    "typescript": "^3.2.2"
+  }
+}
