@@ -399,7 +399,7 @@ var typeDefs = require('./schema/schema.graphql');
 
 var start = function () {
   return __awaiter(_this, void 0, void 0, function () {
-    var UserModel, db, resolvers, mocks, server;
+    var UserModel, resolvers, mocks, server;
 
     var _this = this;
 
@@ -421,14 +421,6 @@ var start = function () {
             lastname: String,
             age: Number
           });
-          return [4
-          /*yield*/
-          , mongoose_1["default"].connect('mongodb://localhost/graphql', {
-            useNewUrlParser: true
-          })];
-
-        case 2:
-          db = _a.sent();
           resolvers = {
             Query: {
               users: function () {

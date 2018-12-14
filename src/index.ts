@@ -2,8 +2,6 @@ import { ApolloServer, gql } from 'apollo-server';
 import mongoose from 'mongoose';
 import casual from 'casual';
 
-import { User } from './schema/generated';
-
 const typeDefs = require('./schema/schema.graphql');
 
 const start = async () => {
@@ -18,11 +16,6 @@ const start = async () => {
     lastname: String,
     age: Number,
   });
-
-  const db = await mongoose.connect(
-    'mongodb://localhost/graphql',
-    { useNewUrlParser: true }
-  );
 
   const resolvers = {
     Query: {
